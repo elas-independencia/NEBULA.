@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="NEBULA — plataforma de pesquisa, planejamento e criação de cosplays."
+    >
+
+    <title>NEBULA | Cosplay Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FUNDO -->
+    <div class="stars"></div>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <a href="#inicio" class="brand">
+            <span class="brand-symbol">✦</span>
+            NEBULA
+        </a>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+        <nav id="nav">
+
+            <a href="#wiki">Wiki</a>
+
+            <a href="#materiais">
+                Materiais
+            </a>
+
+            <a href="#criador">
+                Criador
+            </a>
+
+            <a href="#planos">
+                Planos
+            </a>
+
+        </nav>
+
+        <button
+            class="favorite-button"
+            id="favoritesButton"
+        >
+            ♡
+            <span id="favoriteCount">
+                0
+            </span>
+        </button>
+
+    </header>
+
+
+    <main id="inicio">
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    COSPLAY • PESQUISA • CRIAÇÃO
+                </p>
+
+                <h1>
+                    Seu cosplay começa
+                    <span>na NEBULA.</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    Pesquise personagens, descubra materiais,
+                    consulte informações e monte seu cosplay
+                    de acordo com o orçamento disponível.
+
+                </p>
+
+
+                <!-- BUSCA -->
+
+                <div class="search-box">
+
+                    <input
+                        id="globalSearch"
+                        type="search"
+                        placeholder="Pesquise personagem, tecido, peruca..."
+                    >
+
+                    <button id="searchButton">
+                        Pesquisar
+                    </button>
+
+                </div>
+
+
+                <!-- BUSCAS RÁPIDAS -->
+
+                <div class="quick-tags">
+
+                    <button
+                        class="tag"
+                        data-search="peruca"
+                    >
+                        Perucas
+                    </button>
+
+                    <button
+                        class="tag"
+                        data-search="eva"
+                    >
+                        EVA
+                    </button>
+
+                    <button
+                        class="tag"
+                        data-search="tecido"
+                    >
+                        Tecidos
+                    </button>
+
+                    <button
+                        class="tag"
+                        data-search="acessório"
+                    >
+                        Acessórios
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ELEMENTO VISUAL -->
+
+            <div class="nebula-orb">
+
+                <div class="planet">
+                    ✦
+                </div>
+
+                <div class="orbit orbit-one"></div>
+
+                <div class="orbit orbit-two"></div>
+
+                <div class="orbit orbit-three"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= WIKI ================= -->
+
+        <section
+            class="section"
+            id="wiki"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        01 • WIKI NEBULA
+                    </p>
+
+                    <h2>
+                        Explore personagens
+                    </h2>
+
+                </div>
+
+                <p>
+
+                    Consulte informações sobre personagens
+                    existentes ou crie referências para
+                    personagens originais.
+
+                </p>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="filters">
+
+                <input
+                    id="wikiSearch"
+                    type="search"
+                    placeholder="Pesquisar na Wiki..."
+                >
+
+                <select id="categoryFilter">
+
+                    <option value="todos">
+                        Todas as categorias
+                    </option>
+
+                    <option value="anime">
+                        Anime
+                    </option>
+
+                    <option value="game">
+                        Game
+                    </option>
+
+                    <option value="filme">
+                        Filme
+                    </option>
+
+                    <option value="original">
+                        Original
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PERSONAGENS -->
+
+            <div
+                class="card-grid"
+                id="characterGrid"
+            ></div>
+
+        </section>
+
+
+
+        <!-- ================= MATERIAIS ================= -->
+
+        <section
+            class="section section-alt"
+            id="materiais"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        02 • BIBLIOTECA
+                    </p>
+
+                    <h2>
+                        Materiais de cosplay
+                    </h2>
+
+                </div>
+
+                <p>
+
+                    Descubra materiais, funções
+                    e faixas de preço.
+
+                </p>
+
+            </div>
+
+
+            <div
+                class="material-grid"
+                id="materialGrid"
+            ></div>
+
+        </section>
+
+
+
+        <!-- ================= CRIADOR ================= -->
+
+        <section
+            class="section"
+            id="criador"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        03 • COSPLAY LAB
+                    </p>
+
+                    <h2>
+                        Monte seu cosplay
+                    </h2>
+
+                </div>
+
+                <p>
+
+                    Escolha um personagem e informe
+                    quanto você pretende investir.
+
+                </p>
+
+            </div>
+
+
+            <div class="creator-layout">
+
+
+                <!-- CONFIGURAÇÃO -->
+
+                <div class="creator-panel">
+
+                    <label for="characterSelect">
+                        Personagem
+                    </label>
+
+                    <select id="characterSelect"></select>
+
+
+                    <label for="budgetInput">
+                        Orçamento disponível
+                    </label>
+
+                    <div class="money-input">
+
+                        <span>
+                            R$
+                        </span>
+
+                        <input
+                            id="budgetInput"
+                            type="number"
+                            min="0"
+                            step="10"
+                            value="250"
+                        >
+
+                    </div>
+
+
+                    <label for="styleSelect">
+                        Nível do projeto
+                    </label>
+
+                    <select id="styleSelect">
+
+                        <option value="economico">
+                            Econômico
+                        </option>
+
+                        <option
+                            value="equilibrado"
+                            selected
+                        >
+                            Equilibrado
+                        </option>
+
+                        <option value="completo">
+                            Completo
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        class="primary-button full-button"
+                        id="buildButton"
+                    >
+                        ✨ Montar meu cosplay
+                    </button>
+
+
+                    <p class="helper-text">
+
+                        Os valores são demonstrativos
+                        para apresentação do protótipo.
+
+                    </p>
+
+                </div>
+
+
+                <!-- RESULTADO -->
+
+                <div
+                    class="result-panel"
+                    id="creatorResult"
+                >
+
+                    <div class="empty-result">
+
+                        <span>
+                            ✦
+                        </span>
+
+                        <h3>
+                            Sua estação de criação
+                        </h3>
+
+                        <p>
+
+                            Escolha um personagem e um
+                            orçamento para gerar uma sugestão.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PLANOS ================= -->
+
+        <section
+            class="section"
+            id="planos"
+        >
+
+            <div class="section-heading centered">
+
+                <div>
+
+                    <p class="eyebrow">
+                        04 • NEBULA+
+                    </p>
+
+                    <h2>
+                        Planos de acesso
+                    </h2>
+
+                </div>
+
+                <p>
+
+                    Os planos abaixo são uma simulação
+                    para apresentação do projeto.
+
+                </p>
+
+            </div>
+
+
+            <div class="plans-grid">
+
+
+                <!-- SEMANAL -->
+
+                <article class="plan-card">
+
+                    <span class="plan-icon">
+                        ☄
+                    </span>
+
+                    <h3>
+                        Semanal
+                    </h3>
+
+                    <strong>
+                        R$ 9,90
+                    </strong>
+
+                    <p>
+                        Para experimentar os recursos
+                        da NEBULA durante uma semana.
+                    </p>
+
+                    <button
+                        class="outline-button plan-button"
+                        data-plan="Semanal"
+                    >
+                        Escolher plano
+                    </button>
+
+                </article>
+
+
+                <!-- MENSAL -->
+
+                <article class="plan-card featured">
+
+                    <span class="recommended">
+                        MAIS ACESSADO
+                    </span>
+
+                    <span class="plan-icon">
+                        ✦
+                    </span>
+
+                    <h3>
+                        Mensal
+                    </h3>
+
+                    <strong>
+                        R$ 24,90
+                    </strong>
+
+                    <p>
+                        Pesquisa ampliada e recursos
+                        extras para seus projetos.
+                    </p>
+
+                    <button
+                        class="primary-button plan-button"
+                        data-plan="Mensal"
+                    >
+                        Escolher plano
+                    </button>
+
+                </article>
+
+
+                <!-- ANUAL -->
+
+                <article class="plan-card">
+
+                    <span class="plan-icon">
+                        ✧
+                    </span>
+
+                    <h3>
+                        Anual
+                    </h3>
+
+                    <strong>
+                        R$ 199,90
+                    </strong>
+
+                    <p>
+                        Para acompanhar diversos
+                        projetos durante o ano.
+                    </p>
+
+                    <button
+                        class="outline-button plan-button"
+                        data-plan="Anual"
+                    >
+                        Escolher plano
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CONCEITO ================= -->
+
+        <section class="section about">
+
+            <div>
+
+                <p class="eyebrow">
+                    05 • CONCEITO
+                </p>
+
+                <h2>
+                    Uma oficina dentro
+                    da sua galáxia.
+                </h2>
+
+            </div>
+
+            <p>
+
+                O NEBULA reúne pesquisa e planejamento
+                em um único espaço. A proposta é ajudar
+                o cosplayer a transformar uma referência
+                ou uma ideia original em um projeto possível,
+                considerando materiais, etapas e orçamento.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= MODAL WIKI ================= -->
+
+    <div
+        class="modal hidden"
+        id="characterModal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="close-modal"
+                data-close="characterModal"
+            >
+                ×
+            </button>
+
+            <div id="characterDetails"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= MODAL FAVORITOS ================= -->
+
+    <div
+        class="modal hidden"
+        id="favoritesModal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="close-modal"
+                data-close="favoritesModal"
+            >
+                ×
+            </button>
+
+            <p class="eyebrow">
+                SEUS PROJETOS
+            </p>
+
+            <h2>
+                Favoritos
+            </h2>
+
+            <div id="favoritesList"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TOAST -->
+
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+
+            <strong>
+                ✦ NEBULA
+            </strong>
+
+            <p>
+                Cosplay Research & Creation Lab
+            </p>
+
+        </div>
+
+        <p>
+            Protótipo acadêmico • 2026
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
